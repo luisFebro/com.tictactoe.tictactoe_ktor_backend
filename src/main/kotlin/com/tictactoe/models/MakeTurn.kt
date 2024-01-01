@@ -1,3 +1,6 @@
 package com.tictactoe.models
 
-data class MakeTurn()
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class MakeTurn(val x: Int, val y: Int)

@@ -6,9 +6,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.util.concurrent.ConcurrentHashMap
-import javax.swing.text.html.HTML.Tag.I
 
 class TicTacToeGame {
     // exp: https://youtu.be/sKCCwl5lNBk?t=1130s
@@ -89,7 +89,7 @@ class TicTacToeGame {
             }
 
             it.copy(
-                playerAtTurn = if (currentPlayer == "X") "O" else "X",
+                playerAtTurn = if (currentPlayer == 'X') 'O' else 'X',
                 field = newField,
                 isBoardFull = isBoardFull,
                 winningPlayer = getWinningPlayer()?.also {
