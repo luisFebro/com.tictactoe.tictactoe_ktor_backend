@@ -32,7 +32,8 @@ data class GameState(
         if (!field.contentDeepEquals(other.field)) return false
         if (winningPlayer != other.winningPlayer) return false
         if (isBoardFull != other.isBoardFull) return false
-        return connectedPlayers == other.connectedPlayers
+
+        return true
     }
 
     override fun hashCode(): Int {

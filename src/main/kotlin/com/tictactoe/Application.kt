@@ -7,9 +7,7 @@ import com.tictactoe.plugins.configureSerialization
 import com.tictactoe.plugins.configureSockets
 import io.ktor.server.application.*
 
-fun main(args: Array<String>) {
-    io.ktor.server.netty.EngineMain.main(args)
-}
+fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 // ref: https://www.youtube.com/watch?v=sKCCwl5lNBk&t=1s
 fun Application.module() {
